@@ -2,9 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Puzzles</title>
 </head>
 <body>
+<div class="container">
+    <h1 class="title">Puzzle game</h1>
+
+    <section class="main-block">
+        <!-- SETTINGS -->
+        <aside class="panel" id="settings">
+            <h2>Settings</h2>
+
+            <fieldset class="options">
+                <legend>Difficulty</legend>
+
+                <label>
+                    <input type="radio" name="pieces" checked>
+                    15 pieces
+                </label>
+
+                <label>
+                    <input type="radio" name="pieces">
+                    30 pieces
+                </label>
+
+                <label>
+                    <input type="radio" name="pieces">
+                    50 pieces
+                </label>
+            </fieldset>
+
+            <label class="checkbox">
+                <input type="checkbox" id="timer">
+                Enable timer
+            </label>
+
+            <div class="upload">
+                <input type="file" id="inputImg" accept="image/*">
+                <img id="previewImg" alt="Image preview">
+            </div>
+
+            <button class="start-btn">Start game</button>
+        </aside>
+
+        <!-- GAME -->
+        <main class="panel game" id="game">
+            <h2>Game</h2>
+
+            <div class="pieces">Pieces</div>
+            <div class="fieldForGame">Game field</div>
+        </main>
+    </section>
+
     <script src="main.js"></script>
+</div>
 </body>
+
 </html>
