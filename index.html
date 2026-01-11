@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Puzzles</title>
 </head>
@@ -11,32 +11,19 @@
     <h1 class="title">Puzzle game</h1>
 
     <section class="main-block">
-        <!-- SETTINGS -->
         <aside class="panel" id="settings">
             <h2>Settings</h2>
 
             <fieldset class="options">
                 <legend>Difficulty</legend>
-
-                <label>
-                    <input type="radio" name="pieces" checked>
-                    15 pieces
-                </label>
-
-                <label>
-                    <input type="radio" name="pieces">
-                    30 pieces
-                </label>
-
-                <label>
-                    <input type="radio" name="pieces">
-                    50 pieces
-                </label>
+                <label><input type="radio" name="pieces" value="9" checked> 3x3 (easy)</label>
+                <label><input type="radio" name="pieces" value="25"> 5x5 (medium)</label>
+                <label><input type="radio" name="pieces" value="49"> 7x7 (hard)</label>
+                <label><input type="radio" name="pieces" value="100"> 10x10 (extreme)</label>
             </fieldset>
 
             <label class="checkbox">
-                <input type="checkbox" id="timer">
-                Enable timer
+                <input type="checkbox" id="timer"> Enable timer
             </label>
 
             <div class="upload">
@@ -47,17 +34,13 @@
             <button class="start-btn">Start game</button>
         </aside>
 
-        <!-- GAME -->
         <main class="panel game" id="game">
             <h2>Game</h2>
-
-            <div class="pieces">Pieces</div>
-            <div class="fieldForGame">Game field</div>
+            <div class="fieldForGame" id="gameField"></div>
+            <div id="timerDisplay">Time: 0s</div>
         </main>
     </section>
-
-    <script src="main.js"></script>
 </div>
+<script src="main.js"></script>
 </body>
-
 </html>
